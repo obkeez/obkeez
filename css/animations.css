@@ -1,0 +1,63 @@
+/* Fade-in for sections */
+.fade-in {
+  animation: fadeIn 1s ease-in forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide-down for <details> content */
+details[open] > ul {
+  animation: slideDown 0.4s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button hover pulse */
+button:hover,
+a:hover {
+  animation: pulse 0.6s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Smooth accordion summary color shift */
+summary {
+  transition: color 0.3s ease;
+}
+
+details[open] summary {
+  color: #f5f5f5;
+}
+
+/* Elegant fade for page load */
+body {
+  animation: pageFade 0.8s ease-in;
+  opacity: 0;
+}
+
+@keyframes pageFade {
+  to
